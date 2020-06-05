@@ -1,4 +1,4 @@
-# dodu
+# Khisoft snake and ladder
 
 Khisoft snake and ladder adalah sebuah permainan ular tangga sederhana. Dibagun dengan react js sebagai aplikasi clientnya dan node js(express) sebagai aplikasi servernya dan juga socket.io sebagai komunikasi antara server dan client secara realtime.
 
@@ -22,3 +22,11 @@ Client
 2. ketikan perintah yarn start
 4. aplikasi akan berjalan pada port 3000 dan jangan tutup terminalnya
 5. akses localhost:3000 pada browser
+
+**Whats we get?**
+
+- Simple game snake and ladder
+- Multiplayer (2P)
+- Can create room or join room via URL code
+
+Have a problem? write an issue.
