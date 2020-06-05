@@ -5,11 +5,11 @@ import {BrowserRouter, Route, Redirect} from 'react-router-dom'
 const App = () => {
   return (
     <BrowserRouter>
-      <Route path="/" component={Home}/>
+      <Route path="/" exact component={Home}/>
       <Route path="/create"  render={()=>{
-        return <Redirect to={`/${Date.now()}`}/>
+        return <Redirect to={`/room/${Date.now()}`}/>
       }}/>
-      <Route path="/:id" component={Game}/>
+      <Route path="/room/:id" component={Game}/>
     </BrowserRouter>
   )
 }
