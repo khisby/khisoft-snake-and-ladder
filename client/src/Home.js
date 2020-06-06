@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
-import {Button, Navbar, Jumbotron, Container, Row, Col, FormControl, Form} from 'react-bootstrap';
+import {Button, Nav, Navbar, Jumbotron, Container, Row, Col, FormControl, Form} from 'react-bootstrap';
 import Background from './background.jpg'
 
 const Home = () => {
@@ -28,10 +28,16 @@ const Home = () => {
     // }
     return (<div>
 
-        <Navbar bg="light" variant="light">
+        <Navbar bg="light" variant="light" className="justify-content-between">
             <Navbar.Brand>
                 Khisoft
             </Navbar.Brand>
+            <Nav>
+                <Nav.Link href="http://khisoft.id/">Home</Nav.Link>
+                <Nav.Link href="https://khisoft.id/blog/">Blog</Nav.Link>
+                <Nav.Link href="https://profile.khisoft.id/index.html">About Me</Nav.Link>
+                <Nav.Link href="https://github.com/khisby">Github</Nav.Link>
+            </Nav>
         </Navbar>
         
         <Jumbotron fluid>
