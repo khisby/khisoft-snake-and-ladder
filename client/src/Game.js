@@ -4,7 +4,8 @@ import background from './background.jpg'
 
 class Game extends Component{
   state = {btnDisabled: true, win: [false, false], turn: [false,false], ply: [false, false]}
-  socket = io('http://localhost:4000')
+  web = "https://khisoft-snake-and-ladder.herokuapp.com"
+  socket = io(this.web)
   position = [1,1]
   location = [[15,465],[15,465]]
   player = -1
@@ -130,7 +131,7 @@ class Game extends Component{
 
   componentDidMount() {
     if(this.pertama == true){
-        fetch(`http://localhost:4000/${this.id}`).then(x => {
+        fetch(`${this.web}/${this.id}`).then(x => {
             // console.log(x)
             x.json().then(data => {
                 for(var i = 0; i<data.data.length; i++){
@@ -361,7 +362,7 @@ class Game extends Component{
             'z-index': '1'
             }}/>
         <img ref="image"
-          src={background} 
+          src="https://khisoft.id/ulartangga/background.jpg"
           style={{ 
             'position': 'absolute',
             'top': 0,

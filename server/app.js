@@ -8,6 +8,7 @@ var win = [false,false]
 var turn = [false,false]
 var ply = [false, false]
 var room = []
+const PORT = process.env.PORT || 4000;
 
 Socketio.on('connection', socket => {
     socket.on("move", (arrData) => {
@@ -63,6 +64,11 @@ Express.get("/:id", Cors(), (req, res) => {
     }
 })
 
-Http.listen(4000, () =>{
-    console.log("Listening at port 4000")
+
+Express.get("/", Cors(), (req, res) => {
+    res.send("Hallo node js")
+})
+
+Http.listen(PORT, () =>{
+    console.log("Listening at port " + PORT)
 })
