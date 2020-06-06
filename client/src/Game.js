@@ -1,6 +1,5 @@
 import React, { Component} from 'react';
 import io from 'socket.io-client'
-import background from './background.jpg'
 
 class Game extends Component{
   state = {btnDisabled: true, win: [false, false], turn: [false,false], ply: [false, false]}
@@ -261,6 +260,10 @@ class Game extends Component{
 
                 case 71:
                 this.position[i] = 91
+                break;
+
+                case 87:
+                this.position[i] = 24
                 break;
 
                 case 93:
